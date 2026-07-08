@@ -101,10 +101,14 @@ export default function Navbar() {
                     color: 'var(--color-off-black)',
                     textDecoration: 'none',
                     opacity: 0.8,
-                    transition: 'opacity 0.2s ease',
+                    transition: 'font-weight 0.2s ease',
                   }}
-                  onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.4')}
-                  onMouseLeave={(e) => (e.currentTarget.style.opacity = '0.8')}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.fontWeight = '700'
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.fontWeight = '500'
+                  }}
                 >
                   {link.label}
                 </a>

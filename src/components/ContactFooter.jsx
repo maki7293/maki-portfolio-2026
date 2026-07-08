@@ -6,10 +6,11 @@
 // • Large serif question headline
 // • "Contact me:" label + giant email
 // • Social icon circles (LinkedIn, GitHub, Facebook, Instagram)
-// • Download CV pill button
 // • "With love, Michael • 2026" footer line
 
-import { motion } from 'framer-motion'
+import { useLocation } from 'react-router-dom'
+import { motion, useInView } from 'framer-motion'
+import { useRef, useState, useEffect } from 'react'
 
 /* ── Coloured stars scattered around the headline ── */
 const STARS = [
@@ -82,20 +83,52 @@ const SOCIALS = [
   { label: 'Instagram', href: 'https://www.instagram.com/maki_rola/', Icon: InstagramIcon },
 ]
 
+/* ── Custom Typewriter Component for Contact Headline ── */
+function ContactTypewriter({ text }) {
+  const ref = useRef(null)
+  const isInView = useInView(ref, { once: true, margin: "-100px" })
+  const [charCount, setCharCount] = useState(0)
+
+  useEffect(() => {
+    if (isInView && charCount < text.length) {
+      const timer = setTimeout(() => {
+        setCharCount(prev => prev + 1)
+      }, 50) // typing speed
+      return () => clearTimeout(timer)
+    }
+  }, [isInView, charCount, text.length])
+
+  const visibleText = text.slice(0, charCount)
+  const hiddenText = text.slice(charCount)
+
+  return (
+    <span ref={ref}>
+      {visibleText}
+      {hiddenText && <span style={{ opacity: 0 }}>{hiddenText}</span>}
+      <span style={{ animation: 'cf-pulse 1s cubic-bezier(0.4, 0, 0.6, 1) infinite' }}>|</span>
+    </span>
+  )
+}
+
 /* ══════════════════════════════════════════
    Main Section
 ══════════════════════════════════════════ */
 export default function ContactFooter() {
+  const location = useLocation()
+  const knownPaths = ['/', '/project/skilltree', '/project/clockit', '/project/pour-decisions', '/project/3d-portfolio']
+  const isNotFound = !knownPaths.includes(location.pathname)
+
   return (
     <section
       id="contact"
       style={{
         backgroundColor: 'var(--color-canvas)',
-        padding: 'clamp(5rem, 10vh, 10rem) clamp(1rem, 3vw, 3rem) 0',
+        padding: isNotFound ? '0 clamp(1rem, 3vw, 3rem) 0' : 'clamp(5rem, 10vh, 10rem) clamp(1rem, 3vw, 3rem) 0',
       }}
     >
       {/* ── Contact content — plain canvas, no card border ── */}
-      <motion.div
+      {!isNotFound && (
+        <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: "-50px" }}
@@ -146,7 +179,7 @@ export default function ContactFooter() {
             zIndex: 1,
           }}
         >
-          Got a project in mind, or just want to chat?
+          <ContactTypewriter text="Got a project in mind, or just want to chat?" />
         </h2>
 
         {/* ── Email block ── */}
@@ -174,10 +207,14 @@ export default function ContactFooter() {
               lineHeight: 1,
               color: 'var(--color-off-black)',
               textDecoration: 'none',
-              transition: 'opacity 0.2s ease',
+              transition: 'font-weight 0.2s ease',
             }}
-            onMouseEnter={e => e.currentTarget.style.opacity = '0.65'}
-            onMouseLeave={e => e.currentTarget.style.opacity = '1'}
+            onMouseEnter={e => {
+              e.currentTarget.style.fontWeight = '900'
+            }}
+            onMouseLeave={e => {
+              e.currentTarget.style.fontWeight = '800'
+            }}
           >
             rolamaki05@gmail.com
           </a>
@@ -237,23 +274,26 @@ export default function ContactFooter() {
             borderRadius: '9999px',
             padding: '0.65rem 1.5rem',
             textDecoration: 'none',
-            transition: 'background 0.2s ease, border-color 0.2s ease',
+            transition: 'background 0.2s ease, border-color 0.2s ease, font-weight 0.2s ease',
             position: 'relative',
             zIndex: 1,
           }}
           onMouseEnter={e => {
             e.currentTarget.style.background = 'rgba(35,35,35,0.07)'
             e.currentTarget.style.borderColor = 'rgba(35,35,35,0.6)'
+            e.currentTarget.style.fontWeight = '800'
           }}
           onMouseLeave={e => {
             e.currentTarget.style.background = 'transparent'
             e.currentTarget.style.borderColor = 'rgba(35,35,35,0.3)'
+            e.currentTarget.style.fontWeight = '600'
           }}
         >
           <DownloadIcon />
           Download Resume
         </a>
       </motion.div>
+      )}
 
       {/* ── Thin horizontal divider + footer ── */}
       <footer
@@ -270,14 +310,19 @@ export default function ContactFooter() {
             fontSize: 'clamp(0.78rem, 0.85vw, 0.95rem)',
             letterSpacing: '-0.01em',
             color: 'var(--color-off-black)',
-            opacity: 0.45,
+            opacity: 0.5,
             margin: 0,
           }}
         >
-          With love, Michael • 2026
+          With love, Michael &bull; 2026
         </p>
       </footer>
-
+      <style>{`
+        @keyframes cf-pulse {
+          0%, 100% { opacity: 1; }
+          50% { opacity: 0; }
+        }
+      `}</style>
       {/* ── Responsive styles for stars ── */}
       <style>{`
         /* Mobile: scale stars down, don't hide them */

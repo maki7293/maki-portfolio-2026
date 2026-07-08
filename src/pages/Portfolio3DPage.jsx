@@ -164,6 +164,7 @@ const metaValueStyle = {
 }
 
 import PageWrapper from '../components/PageWrapper'
+import BackButton from '../components/BackButton'
 import { motion } from 'framer-motion'
 
 export default function Portfolio3DPage() {
@@ -184,6 +185,8 @@ export default function Portfolio3DPage() {
         paddingRight: '1.5rem',
       }}
     >
+      <BackButton />
+      
       {/* ── Page Header ── */}
       <motion.div 
         initial={{ opacity: 0, y: 30 }}

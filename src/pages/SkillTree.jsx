@@ -10,6 +10,7 @@ const DETAILS = [
 ]
 
 import PageWrapper from '../components/PageWrapper'
+import BackButton from '../components/BackButton'
 import { motion } from 'framer-motion'
 
 export default function SkillTree() {
@@ -30,6 +31,7 @@ export default function SkillTree() {
           paddingRight: '1.5rem',
         }}
       >
+      <BackButton />
       {/* ── Top section: Text + Hero Image ── */}
       <motion.div 
         initial={{ opacity: 0, y: 40 }}

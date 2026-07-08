@@ -200,11 +200,11 @@ export default function FeaturedWorks() {
           color: #1B3A8F;
           text-decoration: none;
           letter-spacing: -0.01em;
-          transition: gap 0.2s ease, opacity 0.2s ease;
+          transition: gap 0.2s ease, font-weight 0.2s ease;
         }
         .fw-view-link:hover {
           gap: 0.75rem;
-          opacity: 0.7;
+          font-weight: 700;
         }
         .fw-view-link:hover svg {
           transform: translateX(3px);

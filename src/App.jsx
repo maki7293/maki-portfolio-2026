@@ -8,6 +8,8 @@ import SkillTree from './pages/SkillTree'
 import Clockit from './pages/Clockit'
 import PourDecisions from './pages/PourDecisions'
 import Portfolio3DPage from './pages/Portfolio3DPage'
+import NotFound from './pages/NotFound'
+import ScrollToTopButton from './components/ScrollToTopButton'
 
 function AnimatedRoutes() {
   const location = useLocation()
@@ -20,6 +22,7 @@ function AnimatedRoutes() {
         <Route path="/project/clockit" element={<Clockit />} />
         <Route path="/project/pour-decisions" element={<PourDecisions />} />
         <Route path="/project/3d-portfolio" element={<Portfolio3DPage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </AnimatePresence>
   )
@@ -33,6 +36,7 @@ export default function App() {
         <main>
           <AnimatedRoutes />
           <ContactFooter />
+          <ScrollToTopButton />
         </main>
       </div>
     </Router>

@@ -375,11 +375,17 @@ export default function Hero() {
               color: 'var(--color-off-black)',
               textDecoration: 'none',
               letterSpacing: '0',
-              transition: 'opacity 0.2s ease',
+              transition: 'font-weight 0.2s ease',
               opacity: 0.8,
             }}
-            onMouseEnter={(e) => (e.currentTarget.style.opacity = '0.8')}
-            onMouseLeave={(e) => (e.currentTarget.style.opacity = '1')}
+            onMouseEnter={(e) => {
+              e.currentTarget.style.fontWeight = '700'
+              e.currentTarget.style.opacity = '1'
+            }}
+            onMouseLeave={(e) => {
+              e.currentTarget.style.fontWeight = '500'
+              e.currentTarget.style.opacity = '0.8'
+            }}
           >
             rolamaki05@gmail.com
           </a>
