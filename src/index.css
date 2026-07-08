@@ -1,0 +1,158 @@
+@import "tailwindcss";
+
+/* ============================================================
+   LASTIK TEST — Local Font Face Declarations
+   ============================================================ */
+@font-face {
+  font-family: 'Lastik Test';
+  src: url('/assets/lastikvariabletest-regular.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lastik Test';
+  src: url('/assets/lastikvariabletest-semibold.otf') format('opentype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lastik Test';
+  src: url('/assets/lastikvariabletest-bold.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lastik Test';
+  src: url('/assets/lastikvariabletest-extrabold.otf') format('opentype');
+  font-weight: 800;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Lastik Test';
+  src: url('/assets/lastikvariabletest-black.otf') format('opentype');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ============================================================
+   TAILWIND CSS v4 — Theme Design Tokens
+   ============================================================ */
+@theme {
+  /* --- Color Palette --- */
+  --color-canvas: #F2F1EB;
+  --color-off-black: #232323;
+
+  /* Accent colors */
+  --color-accent-red: #B12A2D;
+  --color-accent-green: #2AB143;
+  --color-accent-purple: #5634A7;
+  --color-accent-yellow: #B17D2A;
+  --color-accent-teal: #2AA3B1;
+  --color-accent-blue: #3067AF;
+
+  /* Interactive / Button */
+  --color-btn-fill: #D9D9D9;
+  --color-btn-outline: #232323;
+
+  /* Featured Works containers */
+  --color-fw-skilltree: #6C95D5;
+  --color-fw-clockit: #C9AD33;
+  --color-fw-pour-decisions: #CC7F58;
+
+  /* --- Typography --- */
+  --font-serif: 'Lastik Test', Georgia, serif;
+  --font-sans: 'Inter', system-ui, sans-serif;
+
+  /* --- Spacing / Sizing extras --- */
+  --radius-pill: 9999px;
+}
+
+/* ============================================================
+   BASE STYLES
+   ============================================================ */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--color-canvas);
+  color: var(--color-off-black);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ============================================================
+   REUSABLE COMPONENT CLASSES
+   ============================================================ */
+
+/* Pill button — filled */
+.btn-pill {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.7rem 1.8rem;
+  border-radius: var(--radius-pill);
+  background-color: var(--color-btn-fill);
+  border: 1.5px solid var(--color-btn-outline);
+  color: var(--color-off-black);
+  font-family: var(--font-sans);
+  font-size: clamp(0.9rem, 0.95vw, 1.05rem);
+  font-weight: 500;
+  line-height: 1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.15s ease;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.btn-pill:hover {
+  background-color: var(--color-off-black);
+  color: var(--color-canvas);
+}
+
+/* Social icon circle */
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.75rem;
+  height: 2.75rem;
+  border-radius: 50%;
+  border: 1.5px solid var(--color-off-black);
+  color: var(--color-off-black);
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.social-icon:hover {
+  background-color: var(--color-off-black);
+  color: var(--color-canvas);
+}
+
+/* Hamburger menu lines */
+.hamburger-line {
+  display: block;
+  width: 24px;
+  height: 2px;
+  background-color: var(--color-off-black);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
