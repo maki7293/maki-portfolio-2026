@@ -10,7 +10,7 @@ const VIDEO_PROJECTS = [
     id: 1,
     title: "Grabbing Objects in VR",
     youtubeId: "FKQ1luV8bYQ",
-    description: "An immersive exploration into structural physics for spatial design. This project focuses on building precise interaction mechanics, perfecting object attachment tracking, and ensuring fluid physics simulation inside a virtual reality canvas.",
+    description: "A fun dive into VR physics where I worked on making grabbing objects feel as natural as possible. The main challenge was getting the interaction mechanics right—like fine-tuning object attachment tracking and making sure the physics simulation ran smoothly inside the headset.",
     pipeline: "Modeling → Texturing → VR Architecture → Simulation",
     tools: "Blender, Unity, Sketchfab"
   },
@@ -18,7 +18,7 @@ const VIDEO_PROJECTS = [
     id: 2,
     title: "ARAW NG T.I.P. 3D Render",
     youtubeId: "vgJnpxULvXs",
-    description: "An architectural lighting and environment study capturing the distinct visual geometry of the institution. Focuses on balancing ambient textures with sharp illumination passes to produce a dramatic, crisp environmental render.",
+    description: "A 3D render honoring my school, T.I.P. I focused heavily on architectural lighting to capture the campus's unique look. It was a great study in balancing ambient textures with sharp lighting passes to create a dramatic but crisp environment.",
     pipeline: "Modeling → Texturing → Animation → Compositing",
     tools: "Blender"
   },
@@ -26,7 +26,7 @@ const VIDEO_PROJECTS = [
     id: 3,
     title: "Dead By Deadlines",
     youtubeId: "86qQn8Xnj_4",
-    description: "A mixed-media dynamic short showcasing precise matchmoving pipelines. Features raw film integration synchronized with local 3D spatial elements, meticulous rotoscoping curves, and deep compositing frames to merge narrative with digital reality.",
+    description: "A short mixed-media project where I practiced matchmoving. I took raw live-action footage and integrated 3D elements into the scene. It took a lot of careful rotoscoping and compositing to blend the real world with the digital one smoothly.",
     pipeline: "Filming → Modeling → Texturing → Animation → Rotoscoping → Compositing → Editing",
     tools: "Blender, CapCut, fSpy"
   },
@@ -34,7 +34,7 @@ const VIDEO_PROJECTS = [
     id: 4,
     title: "Velvet Pour: Product Advertisement",
     youtubeId: "CPyFXqhh4xg",
-    description: "A commercial-style fluid and hard-surface simulation focused on premium product presentation. Emphasizes clean lighting setups, realistic material reflections, and smooth tracking motion to mimic modern high-end advertising aesthetics.",
+    description: "A commercial-style animation for a premium product, mixing fluid and hard-surface simulations. I wanted to replicate that high-end advertising look, which meant dialing in clean studio lighting, realistic reflections, and smooth camera tracking.",
     pipeline: "Modeling → Texturing → Studio Lighting → Product Animation → Compositing",
     tools: "Blender"
   },
@@ -42,7 +42,7 @@ const VIDEO_PROJECTS = [
     id: 5,
     title: "Chameleon: Chroma Shifts",
     youtubeId: "NKP1SGVt7NM",
-    description: "An exploration into advanced material shader logic and dynamic texture blending. Built with an intricate environmental background loop, this study focuses on timing animated color transformations seamlessly within a stylized set.",
+    description: "An experiment with dynamic texture blending and shader logic. I built a stylized looping background and focused on timing the color transformations so they shifted seamlessly with the animation.",
     pipeline: "Set Designing → Character Animation → Shader Integration → Compositing → Video Editing",
     tools: "Blender, Sketchfab, CapCut"
   },
@@ -50,7 +50,7 @@ const VIDEO_PROJECTS = [
     id: 6,
     title: "Overdrive Kinetic Study",
     youtubeId: "5t5MVWx2gn4",
-    description: "A high-velocity study emphasizing hard-surface vehicle physics and environmental parallax. Focuses on cinematic camera path mapping, environmental framing, and sharp compositing to convey believable speed and weight.",
+    description: "A high-speed animation study focused on vehicle physics and environmental parallax. To make the speed and weight feel believable, I spent a lot of time on cinematic camera mapping, framing, and compositing.",
     pipeline: "Set Designing → Hard-Surface Animation → Cinematic Camera Tracking → Video Editing",
     tools: "Blender, Sketchfab, CapCut"
   },
@@ -58,7 +58,7 @@ const VIDEO_PROJECTS = [
     id: 7,
     title: "Interactive AR Image Target Integration",
     youtubeId: "SbZL7sJt9L4",
-    description: "An immersive augmented reality structure focusing on user interface integration within a live camera feed. Explores virtual spatial buttons and projecting dynamic screen textures directly onto a moving geometric 3D target plane.",
+    description: "An AR project where I integrated a virtual UI directly into a live camera feed. It was a fun challenge trying to map interactive virtual buttons and dynamic screen textures onto a geometric 3D target in real-time.",
     pipeline: "Set Designing → Virtual Interfaces → AR Plane Mapping → Interactive Animation",
     tools: "Unity, Vuforia, Sketchfab"
   },
@@ -66,7 +66,7 @@ const VIDEO_PROJECTS = [
     id: 8,
     title: "Spatial Shadow & Asset Integration",
     youtubeId: "hlsPdHrMN6Y",
-    description: "A technical study focusing on real-world space alignment. Emphasizes matching focal perspectives, aligning complex local environment coordinates, and generating accurate contact shadows to blend a static digital asset directly on top of raw footage.",
+    description: "A technical test on blending 3D assets into raw footage. I focused on matching the real-world focal perspectives and generating accurate contact shadows so the digital asset actually looks like it belongs in the scene.",
     pipeline: "Asset Selection → Spatial Alignment → Ambient Occlusion → Compositing → Video Editing",
     tools: "Blender, Sketchfab"
   },
@@ -74,7 +74,7 @@ const VIDEO_PROJECTS = [
     id: 9,
     title: "Volumetric Illumination Study",
     youtubeId: "GLoOoWo4pKs",
-    description: "An atmospheric exploration detailing how heavy volumetric lighting interacts with complex hard surfaces. Focuses on bouncing indirect illumination across deep environments to cultivate high-contrast cinematic drama.",
+    description: "A lighting study showing how heavy volumetric fog interacts with complex hard surfaces. I played around with bouncing indirect light across a deep environment to give the scene a moody, cinematic feel.",
     pipeline: "Set Designing → Volumetric Lighting → Camera Choreography → High-End Rendering",
     tools: "Blender, Sketchfab"
   },
@@ -82,7 +82,7 @@ const VIDEO_PROJECTS = [
     id: 10,
     title: "Nostalgia AR: Retro Gameboy",
     youtubeId: "OV6TiLrg7rM",
-    description: "A playful, multi-sensory mobile augmented reality integration combining hardware replica modeling with spatial interaction. Features clean image targeted mechanics, custom input systems, and responsive localized audio layers.",
+    description: "A fun AR project bringing a retro Gameboy into the real world. I modeled the hardware and hooked it up with image-targeted tracking, custom inputs, and spatial audio to make the virtual toy actually feel interactive.",
     pipeline: "Hard-Surface Modeling → Target Tracking Architecture → Spatial Audio Engineering",
     tools: "Blender, Unity, Vuforia"
   },
@@ -90,7 +90,7 @@ const VIDEO_PROJECTS = [
     id: 11,
     title: "Mixed Reality Layering",
     youtubeId: "Oy33Fm9dSHU",
-    description: "A composite sequence experimenting with layering hierarchies. Investigates pixel-accurate masking and color-grading adjustments to anchor a vibrant 3D rendering convincingly into a dynamic real-world digital backdrop.",
+    description: "A compositing experiment focused on layering 3D renders into real-world video. I worked heavily on pixel-accurate masking and color-grading to anchor the vibrant 3D models convincingly into the background.",
     pipeline: "Asset Integration → Color Calibration → Matte Layering → Compositing",
     tools: "Blender, Sketchfab"
   },
@@ -98,7 +98,7 @@ const VIDEO_PROJECTS = [
     id: 12,
     title: "Ethereal Woodland: Photorealistic Environment",
     youtubeId: "SeopWybXeN8",
-    description: "A comprehensive organic set design study building dense foliage and natural scattering. Emphasizes detailed environmental density, soft scattered lighting nodes, and a slow-drifting camera pass to showcase intricate asset layouts.",
+    description: "An organic environment design study focused on photorealistic foliage. I built out a dense forest scene using scattering tools, tweaked the lighting to feel natural, and animated a slow camera drift to show off the details.",
     pipeline: "Foliage Scattering → Set Designing → Micro-Lighting → Environmental Render",
     tools: "Blender"
   },
@@ -106,7 +106,7 @@ const VIDEO_PROJECTS = [
     id: 13,
     title: "Ghibli Remake: Calcifer’s Hearth",
     youtubeId: "ddGKM2tFMMw",
-    description: "An interpretation of a classic aesthetic animated within a stylized 3D set environment. Focuses on bringing warmth, glowing mesh textures, and charming micro-movements together to render an intimate cinematic vignette.",
+    description: "My 3D take on a classic Studio Ghibli scene. I wanted to capture that cozy, warm aesthetic by playing with emissive shader textures and adding subtle micro-movements to bring the diorama to life.",
     pipeline: "Stylized Modeling → Hearth Design → Emissive Shader Animation → Vignette Compositing",
     tools: "Blender, Sketchfab"
   },
@@ -114,7 +114,7 @@ const VIDEO_PROJECTS = [
     id: 14,
     title: "Rigid Body Dynamics: The Bowling Alley",
     youtubeId: "-8XiL1T2oIc",
-    description: "A structural asset physics study managing complex geometry interactions. Focuses entirely on calculating weight properties, dynamic velocity parameters, and realistic object fracturing calculations upon localized impact.",
+    description: "A rigid body physics test disguised as a bowling alley. I focused mostly on the backend physics—calculating object weights, tuning velocity, and setting up realistic fracturing upon impact.",
     pipeline: "Modeling → Material Tuning → Rigid Body Simulation → Render Passes",
     tools: "Blender, Sketchfab"
   },
@@ -122,7 +122,7 @@ const VIDEO_PROJECTS = [
     id: 15,
     title: "Claude Monet: Water Lilies in VR",
     youtubeId: "Ru1X4wE5PV0",
-    description: "Stepping inside classic impressionist brushwork through immersive technology. This environment transforms static fine art coordinates into a navigable 3D virtual landscape space, balancing artistic painterly textures with functional VR exploration parameters.",
+    description: "A VR experience that lets you step inside Monet’s impressionist paintings. The goal was to take a static piece of fine art and turn it into a 3D landscape, balancing painterly textures with actual VR navigation mechanics.",
     pipeline: "Canvas Translation → 3D Space Layout → VR Navigation Mapping → Atmospheric Tuning",
     tools: "Blender, Unity"
   },
@@ -130,7 +130,7 @@ const VIDEO_PROJECTS = [
     id: 16,
     title: "Structural Impact Simulation",
     youtubeId: "5NZuPOoSZ-s",
-    description: "A heavy-impact kinetic study tracking stress points and debris dispersion. Focuses on smooth multi-object collision paths, complex weight calculations, and real-time rigid body system reactions.",
+    description: "A kinetic simulation testing heavy structural impacts. It was all about tracking stress points and debris dispersion, ensuring the multi-object collisions and rigid body reactions looked natural.",
     pipeline: "Modeling → Kinetic Animation → Physics Simulation → Multi-Pass Compositing",
     tools: "Blender"
   },
@@ -138,7 +138,7 @@ const VIDEO_PROJECTS = [
     id: 17,
     title: "Perspective Camera Matchmoving",
     youtubeId: "ud6CQAHS1KA",
-    description: "An advanced tracking exercise aligning digital meshes with erratic live-action camera paths. Uses meticulous marker analysis to solve physical lens properties, allowing complete spatial synchronization between video plates and geometric elements.",
+    description: "An advanced matchmoving test where I tracked erratic live-action camera footage. By analyzing markers and matching the physical lens properties, I was able to sync the 3D geometry perfectly with the raw video plate.",
     pipeline: "Camera Point Tracking → Lens Optimization → Asset Anchoring → Photorealistic Rendering",
     tools: "Blender, Sketchfab"
   }
