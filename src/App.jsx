@@ -1,5 +1,6 @@
 import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-router-dom'
 import { AnimatePresence } from 'framer-motion'
+import { Analytics } from '@vercel/analytics/react'
 import './index.css'
 import Navbar from './components/Navbar'
 import ContactFooter from './components/ContactFooter'
@@ -38,6 +39,7 @@ export default function App() {
           <ContactFooter />
           <ScrollToTopButton />
         </main>
+        <Analytics />
       </div>
     </Router>
   )
